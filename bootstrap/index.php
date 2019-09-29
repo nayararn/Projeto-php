@@ -21,13 +21,13 @@
 <body>
 <div class="container-fluid">
     <?php
-        include 'header.php';
+        include 'Cabec1.php';
     ?>
   <div class="row justify-content-center min-height-100vh align-content-center">
     <div class="col-md-4">
       <div>
         <div>
-          <img src="https://icons-for-free.com/iconfiles/png/512/friend+human+man+member+person+profile+user+users+icon-1320168707291252637.png" alt="Icon-people" class="icon" style="margin-left: auto;
+          <img src="https://pngriver.com/wp-content/uploads/2018/04/Download-Nyan-Cat-PNG.png" alt="Icon-nyan" class="icon" style="margin-left: auto;
                     margin-right: auto;
                     display: block;
                     width: 50%;">
@@ -36,7 +36,7 @@
             if (isset($_GET['error']) && $_GET['error'] == 1) {
                 ?>
               <div class="alert alert-danger" role="alert">
-                Usuário inválido
+                Usuário inválido!
               </div>
                 <?php
             }

@@ -1,9 +1,10 @@
 <?php
 session_start();
-require 'protect.php';
+require 'testaLogado.php';
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
+<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -22,11 +23,11 @@ require 'protect.php';
 <body>
 <div class="container-fluid">
     <?php
-    include 'header.php';
+    include 'Cabec1.php';
     ?>
     <div class="row">
-        <div class="col" style="text-align: center;margin-top: 25vh; ">
-            <h4>Parabéns, você esta logadissímo.</h4>
+        <div class="col" style="text-align: center;margin-top: 25vh; font-family: 'Dosis', sans-serif; ">
+            <h4>Parabéns, você esta logadissímo!</h4>
             <img src="http://giphygifs.s3.amazonaws.com/media/sIIhZliB2McAo/200.gif" alt="">
         </div>
     </div>

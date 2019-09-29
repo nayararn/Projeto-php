@@ -1,8 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light ">
-    <a class="navbar-brand" href="#"><img
-                src="https://icons-for-free.com/iconfiles/png/512/friend+human+man+member+person+profile+user+users+icon-1320168707291252637.png"
-                alt="Icon-people" style="width: 10%;
-">Painel do Usuário</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+    <img src="http://www.pngonly.com/wp-content/uploads/2017/06/Nyan-Cat-Free-PNG.png" alt="Icon-people" style="width: 5%; margin-right: 10px;">Painel do Usuário</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -14,7 +12,7 @@
             if (isset($_SESSION['id'])) {
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link">Olá <?php echo $_SESSION['email'] ?></a>
+                    <a class="nav-link"><?php echo $_SESSION['email'] ?></a>
                 </li>
                 <li class="nav-item active">
                     <form method="POST">
@@ -33,5 +31,4 @@
 
 if(isset($_POST['logout'])){
     session_destroy();
-    header('Location: index.php');
 }
