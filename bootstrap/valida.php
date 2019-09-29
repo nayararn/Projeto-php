@@ -11,15 +11,21 @@ $usuarios_validos = array(
 $email = isset($_POST['email']) ? $_POST['email'] : null;
 $senha = isset($_POST['senha']) ? $_POST['senha'] : null;
 
-$valido=false;
-foreach ($usuarios_validos as $usuarios){
-    if (($usuarios['email'] == $email) && ($usuarios['senha'] == $senha)){
-        $valido=true; 
-	}
-}
-if ($valido==true){
-    header('Location: principal.php');
-}   else{
-    header("Location:/?error=1");
+$valido = false;
+$usuario_autenticado = [];
+foreach ($usuarios_validos as $usuario) {
+    if (($usuario['email'] == $email) && ($usuario['senha'] == $senha)) {
+        $valido = true;
+        $usuario_autenticado = $usuario;
+        break;
     }
+}
+
+if ($valido) {
+    $_SESSION = $usuario_autenticado;
+
+    header('Location: principal.php');
+} else {
+    header("Location:/?error=1");
+}
 ?>
